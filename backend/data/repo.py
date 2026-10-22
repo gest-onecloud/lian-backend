@@ -62,6 +62,12 @@ class Repo:
                 status TEXT DEFAULT 'scheduled',
                 home_score INTEGER,
                 away_score INTEGER,
+                home_xg REAL,
+                away_xg REAL,
+                home_xga REAL,
+                away_xga REAL,
+                home_xa REAL,
+                away_xa REAL,
                 source TEXT,
                 source_url TEXT,
                 source_type TEXT,
@@ -89,6 +95,10 @@ class Repo:
                 evidence REAL,
                 uncertainty REAL,
                 expected_goals REAL,
+                home_xg REAL,
+                away_xg REAL,
+                home_xga REAL,
+                away_xga REAL,
                 rationale TEXT,
                 model_version TEXT,
                 generated_at TEXT DEFAULT CURRENT_TIMESTAMP
@@ -103,6 +113,8 @@ class Repo:
                 away_goals INTEGER,
                 home_xg REAL,
                 away_xg REAL,
+                home_xga REAL,
+                away_xga REAL,
                 home_possession REAL,
                 away_possession REAL,
                 home_shots INTEGER,
@@ -168,8 +180,8 @@ class Repo:
             CREATE TABLE IF NOT EXISTS feature_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,as_of TEXT,feature_json TEXT NOT NULL,source_quality REAL);
             CREATE TABLE IF NOT EXISTS model_evaluations(id INTEGER PRIMARY KEY AUTOINCREMENT,model_version TEXT,scope TEXT,samples INTEGER,accuracy REAL,brier REAL,log_loss REAL,calibration_error REAL,created_at TEXT);
             CREATE TABLE IF NOT EXISTS model_weights(scope TEXT PRIMARY KEY,weights_json TEXT NOT NULL,version INTEGER DEFAULT 1,updated_at TEXT);
-            CREATE TABLE IF NOT EXISTS team_state(team_id TEXT PRIMARY KEY,name TEXT NOT NULL,competition_id TEXT,region TEXT,country TEXT,last_date TEXT,matches INTEGER DEFAULT 0,elo REAL DEFAULT 1500,attack REAL DEFAULT 1,defense REAL DEFAULT 1,home_attack REAL DEFAULT 1,away_attack REAL DEFAULT 1,form5 REAL DEFAULT .5,form10 REAL DEFAULT .5,updated_at TEXT);
-            CREATE TABLE IF NOT EXISTS player_state(player_id TEXT PRIMARY KEY,name TEXT NOT NULL,team_id TEXT,last_date TEXT,matches INTEGER DEFAULT 0,minutes REAL DEFAULT 0,goals REAL DEFAULT 0,assists REAL DEFAULT 0,xg REAL DEFAULT 0,xa REAL DEFAULT 0,shots REAL DEFAULT 0,sot REAL DEFAULT 0,key_passes REAL DEFAULT 0,tackles REAL DEFAULT 0,interceptions REAL DEFAULT 0,cards REAL DEFAULT 0,impact REAL DEFAULT 0,updated_at TEXT);
+            CREATE TABLE IF NOT EXISTS team_state(team_id TEXT PRIMARY KEY,name TEXT NOT NULL,competition_id TEXT,region TEXT,country TEXT,last_date TEXT,matches INTEGER DEFAULT 0,elo REAL DEFAULT 1500,attack REAL DEFAULT 1,defense REAL DEFAULT 1,home_attack REAL DEFAULT 1,away_attack REAL DEFAULT 1,form5 REAL DEFAULT .5,form10 REAL DEFAULT .5,xg REAL DEFAULT 1,xga REAL DEFAULT 1,home_xg REAL DEFAULT 0,away_xg REAL DEFAULT 0,home_xga REAL DEFAULT 0,away_xga REAL DEFAULT 0,updated_at TEXT);
+            CREATE TABLE IF NOT EXISTS player_state(player_id TEXT PRIMARY KEY,name TEXT NOT NULL,team_id TEXT,last_date TEXT,matches INTEGER DEFAULT 0,minutes REAL DEFAULT 0,goals REAL DEFAULT 0,assists REAL DEFAULT 0,xg REAL DEFAULT 0,xa REAL DEFAULT 0,xga REAL DEFAULT 0,shots REAL DEFAULT 0,sot REAL DEFAULT 0,key_passes REAL DEFAULT 0,tackles REAL DEFAULT 0,interceptions REAL DEFAULT 0,cards REAL DEFAULT 0,impact REAL DEFAULT 0,updated_at TEXT);
             CREATE TABLE IF NOT EXISTS prediction_errors(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,p_home REAL,p_draw REAL,p_away REAL,result TEXT,brier REAL,log_loss REAL,goal_error REAL,model_version TEXT,created_at TEXT);
             CREATE TABLE IF NOT EXISTS evidence_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT NOT NULL,model_version TEXT NOT NULL,collected_at TEXT DEFAULT CURRENT_TIMESTAMP,source_count INTEGER DEFAULT 0,historical_matches INTEGER DEFAULT 0,h2h_matches INTEGER DEFAULT 0,feature_count INTEGER DEFAULT 0,quality REAL DEFAULT 0,payload TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS postmatch_reviews(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT UNIQUE NOT NULL,model_version TEXT,predicted TEXT,actual TEXT,brier REAL,log_loss REAL,goal_error REAL,calibration_gap REAL,diagnosis TEXT,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
@@ -177,7 +189,7 @@ class Repo:
             CREATE TABLE IF NOT EXISTS calibration_recommendations(id INTEGER PRIMARY KEY AUTOINCREMENT, model_version TEXT, scope TEXT, metric TEXT, samples INTEGER, current_value REAL, target_value REAL, recommendation TEXT, eligible INTEGER DEFAULT 0, created_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS result_sources(match_id TEXT PRIMARY KEY,source TEXT NOT NULL,source_type TEXT NOT NULL,source_url TEXT,verified_at TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'verified');
             CREATE TABLE IF NOT EXISTS prediction_provenance(match_id TEXT PRIMARY KEY, provenance TEXT NOT NULL, learning_eligible INTEGER NOT NULL DEFAULT 0, classified_at TEXT DEFAULT CURRENT_TIMESTAMP);
-            CREATE TABLE IF NOT EXISTS historical_master(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT UNIQUE NOT NULL,as_of TEXT NOT NULL,home TEXT NOT NULL,away TEXT NOT NULL,competition TEXT,season TEXT,home_score INTEGER,away_score INTEGER,result TEXT,home_xg REAL,away_xg REAL,home_elo REAL,away_elo REAL,home_tier INTEGER,away_tier INTEGER,home_squad_strength REAL,away_squad_strength REAL,sos_home REAL,sos_away REAL,data_quality REAL DEFAULT 0,source TEXT,ingested_at TEXT DEFAULT CURRENT_TIMESTAMP);
+            CREATE TABLE IF NOT EXISTS historical_master(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT UNIQUE NOT NULL,as_of TEXT NOT NULL,home TEXT NOT NULL,away TEXT NOT NULL,competition TEXT,season TEXT,home_score INTEGER,away_score INTEGER,result TEXT,home_xg REAL,away_xg REAL,home_xga REAL,away_xga REAL,home_elo REAL,away_elo REAL,home_tier INTEGER,away_tier INTEGER,home_squad_strength REAL,away_squad_strength REAL,sos_home REAL,sos_away REAL,data_quality REAL DEFAULT 0,source TEXT,ingested_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS squad_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,team TEXT NOT NULL,as_of TEXT NOT NULL,source TEXT NOT NULL,quality REAL DEFAULT 0,expected_xi_strength REAL,available_squad_strength REAL,missing_strength REAL,players_json TEXT NOT NULL,UNIQUE(team,as_of,source));
             CREATE TABLE IF NOT EXISTS promotion_gates(id INTEGER PRIMARY KEY AUTOINCREMENT,baseline_version TEXT NOT NULL,candidate_version TEXT NOT NULL,samples INTEGER NOT NULL,baseline_accuracy REAL,candidate_accuracy REAL,baseline_brier REAL,candidate_brier REAL,baseline_log_loss REAL,candidate_log_loss REAL,status TEXT NOT NULL,reason TEXT NOT NULL,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_unique ON matches(date, home, away);
@@ -188,10 +200,30 @@ class Repo:
             CREATE INDEX IF NOT EXISTS idx_model_runs_match ON model_runs(match_id);
             CREATE INDEX IF NOT EXISTS idx_match_stats_date ON match_stats(date);
             """)
-            # Migración para DBs viejas en Render
-            for col, typ in [('result_source','TEXT'),('result_source_type','TEXT'),('result_source_url','TEXT'),('result_verified_at','TEXT'),('competition_id','TEXT'),('source_type','TEXT'),('data_quality','REAL'),('region','TEXT'),('country','TEXT'),('tier','INTEGER'),('season','TEXT'),('league','TEXT'),('round','TEXT')]:
+            # Migración para DBs viejas - agrega todas las columnas que puedan faltar
+            cols_to_add = [
+                ('matches', 'home_xg', 'REAL'), ('matches', 'away_xg', 'REAL'),
+                ('matches', 'home_xga', 'REAL'), ('matches', 'away_xga', 'REAL'),
+                ('matches', 'home_xa', 'REAL'), ('matches', 'away_xa', 'REAL'),
+                ('matches', 'result_source', 'TEXT'), ('matches', 'result_source_type', 'TEXT'),
+                ('matches', 'result_source_url', 'TEXT'), ('matches', 'result_verified_at', 'TEXT'),
+                ('matches', 'competition_id', 'TEXT'), ('matches', 'source_type', 'TEXT'),
+                ('matches', 'data_quality', 'REAL'), ('matches', 'region', 'TEXT'),
+                ('matches', 'country', 'TEXT'), ('matches', 'tier', 'INTEGER'),
+                ('matches', 'season', 'TEXT'), ('matches', 'league', 'TEXT'), ('matches', 'round', 'TEXT'),
+                ('predictions', 'home_xg', 'REAL'), ('predictions', 'away_xg', 'REAL'),
+                ('predictions', 'home_xga', 'REAL'), ('predictions', 'away_xga', 'REAL'),
+                ('match_stats', 'home_xg', 'REAL'), ('match_stats', 'away_xg', 'REAL'),
+                ('match_stats', 'home_xga', 'REAL'), ('match_stats', 'away_xga', 'REAL'),
+                ('team_state', 'home_xga', 'REAL'), ('team_state', 'away_xga', 'REAL'),
+                ('team_state', 'home_xg', 'REAL'), ('team_state', 'away_xg', 'REAL'),
+                ('team_state', 'xga', 'REAL'), ('team_state', 'xg', 'REAL'),
+                ('historical_master', 'home_xga', 'REAL'), ('historical_master', 'away_xga', 'REAL'),
+                ('player_state', 'xga', 'REAL'),
+            ]
+            for tbl, col, typ in cols_to_add:
                 try:
-                    c.execute(f'ALTER TABLE matches ADD COLUMN {col} {typ}')
+                    c.execute(f'ALTER TABLE {tbl} ADD COLUMN {col} {typ}')
                 except Exception:
                     pass
             try:
