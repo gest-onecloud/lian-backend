@@ -1,6 +1,7 @@
-data/*.db
-data/*.sqlite
-data/*.sqlite3
-__pycache__/
-*.pyc
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.sqlite
+**/__pycache__/
+**/*.pyc
 .env
