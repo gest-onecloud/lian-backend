@@ -55,7 +55,7 @@ class BackgroundEngine:
                         AdaptiveCalibration(self.r).run()
                 except Exception as rex:
                     self.r.execute("UPDATE background_heartbeat SET message=? WHERE id=1",(f'result-sync {d}: {rex}',))
-            self.r.execute("UPDATE background_heartbeat SET message=? WHERE id=1",(f'rolling fixtures {span.get('start')}..{span.get('end')}; recent results 31d',))
+            self.r.execute("UPDATE background_heartbeat SET message=? WHERE id=1",(f"rolling fixtures {span.get('start')}.{span.get('end')}, recent results 31d",))
         except Exception as ex: self.r.execute("UPDATE background_heartbeat SET status='degraded',message=? WHERE id=1",(str(ex),))
         self.r.execute("UPDATE background_heartbeat SET status='idle',message=? WHERE id=1",('cycle complete',))
     def loop(self):
