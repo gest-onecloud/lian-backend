@@ -169,6 +169,8 @@ class Repo:
             CREATE INDEX IF NOT EXISTS idx_matches_status ON matches(status);
             CREATE INDEX IF NOT EXISTS idx_predictions_generated ON predictions(generated_at);
             CREATE INDEX IF NOT EXISTS idx_model_runs_match ON model_runs(match_id);
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_unique ON matches(date, home, away);
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_unique_comp ON matches(date, competition, home, away);
             """)
             for col, typ in [('result_source','TEXT'),('result_source_type','TEXT'),('result_source_url','TEXT'),('result_verified_at','TEXT'),('competition_id','TEXT'),('source_type','TEXT'),('data_quality','REAL'),('region','TEXT'),('country','TEXT'),('tier','INTEGER'),('season','TEXT'),('league','TEXT'),('round','TEXT')]:
                 for tbl in ['matches','team_state']:
