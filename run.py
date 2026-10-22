@@ -15,6 +15,6 @@ for method in ['init', 'init_db', 'init_schema', 'ensure_schema', 'create_tables
         except Exception as e:
             print(f"{method} error: {e}")
 
-print("DB inicializada, arrancando servidor...")
+print("DB OK, arrancando servidor...")
 import backend.server
 backend.server.main()
