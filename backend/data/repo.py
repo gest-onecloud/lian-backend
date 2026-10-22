@@ -73,6 +73,9 @@ class Repo:
                 region TEXT,
                 country TEXT,
                 tier INTEGER,
+                season TEXT,
+                league TEXT,
+                round TEXT,
                 created_at TEXT DEFAULT CURRENT_TIMESTAMP,
                 updated_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
@@ -167,12 +170,8 @@ class Repo:
             CREATE INDEX IF NOT EXISTS idx_predictions_generated ON predictions(generated_at);
             CREATE INDEX IF NOT EXISTS idx_model_runs_match ON model_runs(match_id);
             """)
-            tables_cols = {
-                'matches': [('result_source','TEXT'),('result_source_type','TEXT'),('result_source_url','TEXT'),('result_verified_at','TEXT'),('competition_id','TEXT'),('source_type','TEXT'),('data_quality','REAL'),('region','TEXT'),('country','TEXT'),('tier','INTEGER')],
-                'team_state': [('region','TEXT'),('country','TEXT'),('competition_id','TEXT')],
-            }
-            for tbl, cols in tables_cols.items():
-                for col, typ in cols:
+            for col, typ in [('result_source','TEXT'),('result_source_type','TEXT'),('result_source_url','TEXT'),('result_verified_at','TEXT'),('competition_id','TEXT'),('source_type','TEXT'),('data_quality','REAL'),('region','TEXT'),('country','TEXT'),('tier','INTEGER'),('season','TEXT'),('league','TEXT'),('round','TEXT')]:
+                for tbl in ['matches','team_state']:
                     try:
                         c.execute(f'ALTER TABLE {tbl} ADD COLUMN {col} {typ}')
                     except Exception:
