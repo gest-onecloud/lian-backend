@@ -14,47 +14,76 @@ class Repo:
         c.execute('PRAGMA journal_mode=WAL')
         return c
 
+    # Lista COMPLETA de todas las columnas que tu motor puede pedir
+    ALL_STATS_COLS = [
+        'home_fouls','away_fouls','home_corners','away_corners',
+        'home_yellow','away_yellow','home_yellow_cards','away_yellow_cards',
+        'home_red','away_red','home_red_cards','away_red_cards',
+        'home_sot','away_sot','home_shots','away_shots',
+        'home_xg','away_xg','home_xga','away_xga','home_xa','away_xa',
+        'home_possession','away_possession','home_goals','away_goals',
+        'home_offsides','away_offsides','home_saves','away_saves',
+        'season','league','round','region','country','tier','competition_id','source_type','data_quality',
+        'result_source','result_source_type','result_source_url','result_verified_at'
+    ]
+
+    def _ensure_all_stats_columns(self):
+        # Crea TODAS las columnas posibles de una vez para no estar reintentando una por una
+        for col in self.ALL_STATS_COLS:
+            typ = 'INTEGER' if any(k in col for k in ['_sot','_shots','_goals','_corners','_fouls','_cards','_yellow','_red','_saves','_offsides']) else 'REAL' if any(k in col for k in ['xg','xa','xga','possession','elo','attack']) else 'TEXT'
+            if col in ['season','league','round','region','country','competition_id','source_type','result_source','result_source_type','result_source_url','result_verified_at']:
+                typ = 'TEXT'
+            for tbl in ['matches','match_stats','predictions','team_state','player_state','historical_master']:
+                try:
+                    cc = self.connect()
+                    cc.execute(f'ALTER TABLE {tbl} ADD COLUMN {col} {typ}')
+                    cc.close()
+                except Exception:
+                    try: cc.close()
+                    except: pass
+
     def _try_add_missing_column(self, err_msg):
         m = re.search(r'no such column:\s*([a-zA-Z0-9_\.]+)', str(err_msg), re.I)
         if not m:
             return False
         col = m.group(1).split('.')[-1]
         col = re.sub(r'[^a-zA-Z0-9_]', '', col)
-        if not col:
-            return False
-        if col.endswith(('_sot','_shots','_goals','_corners','_fouls','_cards','_yellow','_red')):
-            typ = 'INTEGER'
-        elif any(k in col for k in ['xg','xa','xga','elo','attack','defense','form','evidence','confidence','brier','possession']):
-            typ = 'REAL'
-        else:
-            typ = 'TEXT'
-        candidates = ['matches','match_stats','predictions','team_state','player_state','historical_master','feature_snapshots','model_runs','evidence_snapshots']
+        if not col: return False
+        # Si es yellow a secas, agrega también yellow_cards
+        to_add = [col]
+        if col == 'away_yellow': to_add.extend(['away_yellow_cards','home_yellow_cards','home_yellow','away_yellow'])
+        if col == 'home_yellow': to_add.extend(['home_yellow_cards','away_yellow_cards'])
+        if col == 'away_fouls': to_add.extend(['home_fouls','away_fouls','home_corners','away_corners'])
+        if col == 'away_sot': to_add.extend(['home_sot','away_sot','home_shots','away_shots'])
+        
         added = False
-        for tbl in candidates:
-            try:
-                cc = self.connect()
-                cc.execute(f'ALTER TABLE {tbl} ADD COLUMN {col} {typ}')
-                cc.close()
-                added = True
-            except Exception:
-                try: cc.close()
-                except: pass
+        for cname in set(to_add):
+            typ = 'INTEGER' if any(k in cname for k in ['fouls','corners','sot','shots','goals','cards','yellow','red','saves']) else 'REAL'
+            for tbl in ['matches','match_stats','predictions','team_state']:
+                try:
+                    cc = self.connect()
+                    cc.execute(f'ALTER TABLE {tbl} ADD COLUMN {cname} {typ}')
+                    cc.close()
+                    added = True
+                except:
+                    try: cc.close()
+                    except: pass
         return added
 
     def _ensure_table(self, table_name):
         try:
             c = self.connect()
             if table_name == 'match_stats':
-                c.executescript("""CREATE TABLE IF NOT EXISTS match_stats(
-                    match_id TEXT PRIMARY KEY, date TEXT, home TEXT, away TEXT, competition TEXT,
-                    home_goals INTEGER, away_goals INTEGER, stats_json TEXT, created_at TEXT DEFAULT CURRENT_TIMESTAMP);""")
+                c.executescript("CREATE TABLE IF NOT EXISTS match_stats(match_id TEXT PRIMARY KEY, stats_json TEXT);")
             c.close()
         except: pass
 
     def rows(self, sql, args=()):
         attempts = 0
-        while attempts < 50:
+        while True:
             attempts += 1
+            if attempts > 100:
+                raise RuntimeError(f"Se alcanzó límite de reintentos (100) para: {sql}")
             c = self.connect()
             try:
                 res = [dict(r) for r in c.execute(sql, args).fetchall()]
@@ -74,12 +103,13 @@ class Repo:
                         except: pass
                         continue
                 raise
-        raise RuntimeError(f"Demasiados reintentos para: {sql}")
 
     def one(self, sql, args=()):
         attempts = 0
-        while attempts < 50:
+        while True:
             attempts += 1
+            if attempts > 100:
+                raise RuntimeError(f"Límite 100 reintentos: {sql}")
             c = self.connect()
             try:
                 r = c.execute(sql, args).fetchone()
@@ -99,12 +129,13 @@ class Repo:
                         except: pass
                         continue
                 raise
-        raise RuntimeError(f"Demasiados reintentos para: {sql}")
 
     def execute(self, sql, args=()):
         attempts = 0
-        while attempts < 50:
+        while True:
             attempts += 1
+            if attempts > 100:
+                raise RuntimeError(f"Límite 100 reintentos: {sql}")
             c = self.connect()
             try:
                 c.execute('BEGIN IMMEDIATE')
@@ -136,7 +167,6 @@ class Repo:
                         continue
                     except: pass
                 raise
-        raise RuntimeError(f"Demasiados reintentos para: {sql}")
 
     def init(self): return self.init_all()
 
@@ -151,7 +181,8 @@ class Repo:
                 home_xg REAL, away_xg REAL, home_xga REAL, away_xga REAL, home_xa REAL, away_xa REAL,
                 home_sot INTEGER, away_sot INTEGER, home_shots INTEGER, away_shots INTEGER,
                 home_fouls INTEGER, away_fouls INTEGER, home_corners INTEGER, away_corners INTEGER,
-                home_yellow_cards INTEGER, away_yellow_cards INTEGER, home_red_cards INTEGER, away_red_cards INTEGER,
+                home_yellow INTEGER, away_yellow INTEGER, home_yellow_cards INTEGER, away_yellow_cards INTEGER,
+                home_red INTEGER, away_red INTEGER, home_red_cards INTEGER, away_red_cards INTEGER,
                 home_possession REAL, away_possession REAL,
                 source TEXT, source_url TEXT, source_type TEXT, data_quality REAL DEFAULT 0,
                 result_source TEXT, result_source_type TEXT, result_source_url TEXT, result_verified_at TEXT,
@@ -166,10 +197,12 @@ class Repo:
             );
             CREATE TABLE IF NOT EXISTS match_stats(
                 match_id TEXT PRIMARY KEY, date TEXT, home TEXT, away TEXT, competition TEXT,
-                home_goals INTEGER, away_goals INTEGER, home_xg REAL, away_xg REAL, home_xga REAL, away_xga REAL,
+                home_goals INTEGER, away_goals INTEGER,
+                home_xg REAL, away_xg REAL, home_xga REAL, away_xga REAL,
                 home_sot INTEGER, away_sot INTEGER, home_shots INTEGER, away_shots INTEGER,
                 home_fouls INTEGER, away_fouls INTEGER, home_corners INTEGER, away_corners INTEGER,
-                home_yellow_cards INTEGER, away_yellow_cards INTEGER, home_red_cards INTEGER, away_red_cards INTEGER,
+                home_yellow INTEGER, away_yellow INTEGER, home_yellow_cards INTEGER, away_yellow_cards INTEGER,
+                home_red INTEGER, away_red INTEGER, home_red_cards INTEGER, away_red_cards INTEGER,
                 home_possession REAL, away_possession REAL,
                 stats_json TEXT, created_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
@@ -206,6 +239,9 @@ class Repo:
             except: pass
         finally:
             c.close()
+        # Asegura todas las columnas posibles al iniciar
+        self._ensure_all_stats_columns()
+
     def init_learning(self):
         try: self.init_all()
         except: pass
