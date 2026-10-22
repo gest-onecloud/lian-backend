@@ -3,5 +3,6 @@ WORKDIR /app
 COPY . .
 RUN mkdir -p backend/data
 ENV LIAN_PORT=8000
+ENV PYTHONPATH=/app
 EXPOSE 8000
-CMD ["python", "backend/server.py"]
+CMD ["python", "run.py"]
