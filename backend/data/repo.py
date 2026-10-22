@@ -45,14 +45,12 @@ class Repo:
             c.close()
 
     def init(self):
-        """Crea TODAS las tablas necesarias para producción - fix para Render + IONOS"""
         return self.init_all()
 
     def init_all(self):
         c = self.connect()
         try:
-            c.executescript('''
-            -- TABLAS CORE DE PARTIDOS
+            c.executescript("""
             CREATE TABLE IF NOT EXISTS matches(
                 id TEXT PRIMARY KEY,
                 date TEXT NOT NULL,
@@ -75,7 +73,6 @@ class Repo:
                 created_at TEXT DEFAULT CURRENT_TIMESTAMP,
                 updated_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
-
             CREATE TABLE IF NOT EXISTS predictions(
                 match_id TEXT PRIMARY KEY,
                 p_home REAL,
@@ -90,8 +87,6 @@ class Repo:
                 model_version TEXT,
                 generated_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
-
-            -- CACHE DE FIXTURES
             CREATE TABLE IF NOT EXISTS fixture_sync_cache(
                 date TEXT PRIMARY KEY,
                 updated_at TEXT,
@@ -100,7 +95,6 @@ class Repo:
                 source_counts TEXT,
                 failures TEXT
             );
-
             CREATE TABLE IF NOT EXISTS fixture_sync(
                 date TEXT,
                 source TEXT,
@@ -109,22 +103,17 @@ class Repo:
                 updated_at TEXT DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY(date, source)
             );
-
-            -- HEARTBEAT Y ESTADO
             CREATE TABLE IF NOT EXISTS background_heartbeat(
                 id INTEGER PRIMARY KEY,
                 last_run TEXT,
                 status TEXT,
                 details TEXT
             );
-
             CREATE TABLE IF NOT EXISTS engine_state(
                 key TEXT PRIMARY KEY,
                 value TEXT,
                 updated_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
-
-            -- REGISTRIES
             CREATE TABLE IF NOT EXISTS source_registry(
                 source TEXT PRIMARY KEY,
                 kind TEXT,
@@ -135,7 +124,6 @@ class Repo:
                 failures INTEGER DEFAULT 0,
                 notes TEXT
             );
-
             CREATE TABLE IF NOT EXISTS source_registry_v2(
                 source TEXT PRIMARY KEY,
                 kind TEXT,
@@ -146,7 +134,6 @@ class Repo:
                 failures INTEGER DEFAULT 0,
                 notes TEXT
             );
-
             CREATE TABLE IF NOT EXISTS canonical_entities(
                 entity_key TEXT PRIMARY KEY,
                 entity_type TEXT,
@@ -155,8 +142,6 @@ class Repo:
                 quality REAL,
                 updated_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
-
-            -- LEARNING (ya existía pero lo reforzamos)
             CREATE TABLE IF NOT EXISTS adaptive_events(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,scope TEXT,entity TEXT,payload TEXT,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS model_runs(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,model_version TEXT,p_home REAL,p_draw REAL,p_away REAL,pick TEXT,confidence REAL,evidence REAL,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS feature_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,as_of TEXT,feature_json TEXT NOT NULL,source_quality REAL);
@@ -174,41 +159,31 @@ class Repo:
             CREATE TABLE IF NOT EXISTS historical_master(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT UNIQUE NOT NULL,as_of TEXT NOT NULL,home TEXT NOT NULL,away TEXT NOT NULL,competition TEXT,season TEXT,home_score INTEGER,away_score INTEGER,result TEXT,home_xg REAL,away_xg REAL,home_elo REAL,away_elo REAL,home_tier INTEGER,away_tier INTEGER,home_squad_strength REAL,away_squad_strength REAL,sos_home REAL,sos_away REAL,data_quality REAL DEFAULT 0,source TEXT,ingested_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS squad_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,team TEXT NOT NULL,as_of TEXT NOT NULL,source TEXT NOT NULL,quality REAL DEFAULT 0,expected_xi_strength REAL,available_squad_strength REAL,missing_strength REAL,players_json TEXT NOT NULL,UNIQUE(team,as_of,source));
             CREATE TABLE IF NOT EXISTS promotion_gates(id INTEGER PRIMARY KEY AUTOINCREMENT,baseline_version TEXT NOT NULL,candidate_version TEXT NOT NULL,samples INTEGER NOT NULL,baseline_accuracy REAL,candidate_accuracy REAL,baseline_brier REAL,candidate_brier REAL,baseline_log_loss REAL,candidate_log_loss REAL,status TEXT NOT NULL,reason TEXT NOT NULL,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
-
-            -- INDICES
             CREATE INDEX IF NOT EXISTS idx_matches_date ON matches(date);
             CREATE INDEX IF NOT EXISTS idx_matches_status ON matches(status);
             CREATE INDEX IF NOT EXISTS idx_predictions_generated ON predictions(generated_at);
             CREATE INDEX IF NOT EXISTS idx_model_runs_match ON model_runs(match_id);
-            ''')
-
-            -- Columnas adicionales por compatibilidad
+            """)
             for col, typ in [('result_source','TEXT'),('result_source_type','TEXT'),('result_source_url','TEXT'),('result_verified_at','TEXT'),('competition_id','TEXT'),('source_type','TEXT'),('data_quality','REAL')]:
                 try:
                     c.execute(f'ALTER TABLE matches ADD COLUMN {col} {typ}')
                 except Exception:
                     pass
-
-            # Seed heartbeat
             try:
                 c.execute("INSERT OR IGNORE INTO background_heartbeat(id, status) VALUES(1, 'initialized')")
             except Exception:
                 pass
-
         finally:
             c.close()
 
     def init_learning(self):
-        # Mantener compatibilidad, ahora llama a init_all
         try:
             self.init_all()
         except Exception:
             pass
-
-        # Código original de learning
         c = self.connect()
         try:
-            c.executescript('''
+            c.executescript("""
             CREATE TABLE IF NOT EXISTS adaptive_events(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,scope TEXT,entity TEXT,payload TEXT,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS model_runs(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,model_version TEXT,p_home REAL,p_draw REAL,p_away REAL,pick TEXT,confidence REAL,evidence REAL,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS feature_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT,as_of TEXT,feature_json TEXT NOT NULL,source_quality REAL);
@@ -227,6 +202,6 @@ class Repo:
             CREATE TABLE IF NOT EXISTS historical_master(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT UNIQUE NOT NULL,as_of TEXT NOT NULL,home TEXT NOT NULL,away TEXT NOT NULL,competition TEXT,season TEXT,home_score INTEGER,away_score INTEGER,result TEXT,home_xg REAL,away_xg REAL,home_elo REAL,away_elo REAL,home_tier INTEGER,away_tier INTEGER,home_squad_strength REAL,away_squad_strength REAL,sos_home REAL,sos_away REAL,data_quality REAL DEFAULT 0,source TEXT,ingested_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS squad_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,team TEXT NOT NULL,as_of TEXT NOT NULL,source TEXT NOT NULL,quality REAL DEFAULT 0,expected_xi_strength REAL,available_squad_strength REAL,missing_strength REAL,players_json TEXT NOT NULL,UNIQUE(team,as_of,source));
             CREATE TABLE IF NOT EXISTS promotion_gates(id INTEGER PRIMARY KEY AUTOINCREMENT,baseline_version TEXT NOT NULL,candidate_version TEXT NOT NULL,samples INTEGER NOT NULL,baseline_accuracy REAL,candidate_accuracy REAL,baseline_brier REAL,candidate_brier REAL,baseline_log_loss REAL,candidate_log_loss REAL,status TEXT NOT NULL,reason TEXT NOT NULL,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
-            ''')
+            """)
         finally:
             c.close()
