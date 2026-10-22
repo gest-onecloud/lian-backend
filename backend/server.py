@@ -40,8 +40,9 @@ from .services.match_lifecycle import enrich as enrich_lifecycle
 from .services.historical_master import HistoricalMaster
 from .learning.promotion_gate import PromotionGate
 
-ROOT = Path(__file__).resolve().parents[1]
-repo = Repo(ROOT / 'data' / 'lian.db')
+ROOT = Path(__file__).resolve().parent  # esto es /app/backend
+REPO_PATH = ROOT / 'data' / 'lian.db'  # esto es /app/backend/data/lian.db
+repo = Repo(REPO_PATH)
 VERSION = '64.6.0'
 PORT = int(os.getenv('LIAN_PORT', '8010'))
 
