@@ -93,13 +93,28 @@ class Repo:
                 model_version TEXT,
                 generated_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
+            CREATE TABLE IF NOT EXISTS match_stats(
+                match_id TEXT PRIMARY KEY,
+                date TEXT,
+                home TEXT,
+                away TEXT,
+                competition TEXT,
+                home_goals INTEGER,
+                away_goals INTEGER,
+                home_xg REAL,
+                away_xg REAL,
+                home_possession REAL,
+                away_possession REAL,
+                home_shots INTEGER,
+                away_shots INTEGER,
+                stats_json TEXT,
+                created_at TEXT DEFAULT CURRENT_TIMESTAMP
+            );
             CREATE TABLE IF NOT EXISTS fixture_sync_cache(
                 date TEXT PRIMARY KEY,
-                updated_at TEXT,
-                coverage_status TEXT,
-                match_count INTEGER DEFAULT 0,
-                source_counts TEXT,
-                failures TEXT
+                updated_at REAL NOT NULL,
+                coverage_status TEXT NOT NULL DEFAULT 'unknown',
+                match_count INTEGER NOT NULL DEFAULT 0
             );
             CREATE TABLE IF NOT EXISTS fixture_sync(
                 date TEXT,
@@ -165,19 +180,20 @@ class Repo:
             CREATE TABLE IF NOT EXISTS historical_master(id INTEGER PRIMARY KEY AUTOINCREMENT,match_id TEXT UNIQUE NOT NULL,as_of TEXT NOT NULL,home TEXT NOT NULL,away TEXT NOT NULL,competition TEXT,season TEXT,home_score INTEGER,away_score INTEGER,result TEXT,home_xg REAL,away_xg REAL,home_elo REAL,away_elo REAL,home_tier INTEGER,away_tier INTEGER,home_squad_strength REAL,away_squad_strength REAL,sos_home REAL,sos_away REAL,data_quality REAL DEFAULT 0,source TEXT,ingested_at TEXT DEFAULT CURRENT_TIMESTAMP);
             CREATE TABLE IF NOT EXISTS squad_snapshots(id INTEGER PRIMARY KEY AUTOINCREMENT,team TEXT NOT NULL,as_of TEXT NOT NULL,source TEXT NOT NULL,quality REAL DEFAULT 0,expected_xi_strength REAL,available_squad_strength REAL,missing_strength REAL,players_json TEXT NOT NULL,UNIQUE(team,as_of,source));
             CREATE TABLE IF NOT EXISTS promotion_gates(id INTEGER PRIMARY KEY AUTOINCREMENT,baseline_version TEXT NOT NULL,candidate_version TEXT NOT NULL,samples INTEGER NOT NULL,baseline_accuracy REAL,candidate_accuracy REAL,baseline_brier REAL,candidate_brier REAL,baseline_log_loss REAL,candidate_log_loss REAL,status TEXT NOT NULL,reason TEXT NOT NULL,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_unique ON matches(date, home, away);
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_unique_comp ON matches(date, competition, home, away);
             CREATE INDEX IF NOT EXISTS idx_matches_date ON matches(date);
             CREATE INDEX IF NOT EXISTS idx_matches_status ON matches(status);
             CREATE INDEX IF NOT EXISTS idx_predictions_generated ON predictions(generated_at);
             CREATE INDEX IF NOT EXISTS idx_model_runs_match ON model_runs(match_id);
-            CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_unique ON matches(date, home, away);
-            CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_unique_comp ON matches(date, competition, home, away);
+            CREATE INDEX IF NOT EXISTS idx_match_stats_date ON match_stats(date);
             """)
+            # Migración para DBs viejas en Render
             for col, typ in [('result_source','TEXT'),('result_source_type','TEXT'),('result_source_url','TEXT'),('result_verified_at','TEXT'),('competition_id','TEXT'),('source_type','TEXT'),('data_quality','REAL'),('region','TEXT'),('country','TEXT'),('tier','INTEGER'),('season','TEXT'),('league','TEXT'),('round','TEXT')]:
-                for tbl in ['matches','team_state']:
-                    try:
-                        c.execute(f'ALTER TABLE {tbl} ADD COLUMN {col} {typ}')
-                    except Exception:
-                        pass
+                try:
+                    c.execute(f'ALTER TABLE matches ADD COLUMN {col} {typ}')
+                except Exception:
+                    pass
             try:
                 c.execute("INSERT OR IGNORE INTO background_heartbeat(id, status) VALUES(1, 'initialized')")
             except Exception:
