@@ -1,7 +1,15 @@
 const LIAN_VERSION='64.6.0';
 const $=s=>document.querySelector(s),out=$('#out'),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let view='day',data=[],selected=new Set();
-async function api(u){const r=await fetch(u,{cache:'no-store'});let x={};try{x=await r.json()}catch(_){throw Error('Respuesta inválida del servidor')}if(!r.ok)throw Error(x.error||`HTTP ${r.status}`);return x}
+const BACKEND = "https://lian-backend.onrender.com";
+async function api(u){
+  const full = u.startsWith('/api') ? BACKEND + u : u;
+  const r=await fetch(full,{cache:'no-store'});
+  let x={};
+  try{x=await r.json()}catch(_){throw Error('Respuesta inválida del servidor')}
+  if(!r.ok)throw Error(x.error||`HTTP ${r.status}`);
+  return x
+}
 function pct(x){return (Number(x||0)*100).toFixed(1)+'%'}
 function qclass(q){return q==='ALTA'?'high':q==='MEDIA'?'mid':'low'}
 function bar(v){return `<div class="mini-bar"><i style="width:${Math.max(2,Math.min(100,Number(v||0)*100))}%"></i></div>`}
