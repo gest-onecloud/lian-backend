@@ -1,0 +1,17 @@
+{
+  "cal-2026-08-25-concacaf-leagues-cf-monterrey-chicago-fire-fc": {
+    "as_of": "2026-08-25T00:00:00",
+    "sources": [
+      {"name":"Leagues Cup official match preview","url":"https://www.leaguescup.com/news/match-preview-chicago-fire-hosts-monterrey-in-seatgeek-stadium-as-they-look-to-remain-perfect-in-leagues-cup"},
+      {"name":"Leagues Cup official quarterfinal venues","url":"https://www.leaguescup.com/news/leagues-cup-2026-quarterfinal-schedule-and-venues-announced"}
+    ],
+    "home": {"last5_wins":3,"last5_draws":0,"last5_losses":2,"last5_ppg":1.8,"competition_points":6,"competition_matches":3},
+    "away": {"last5_wins":4,"last5_draws":1,"last5_losses":0,"last5_ppg":2.6,"competition_points":9,"competition_matches":3},
+    "notes": [
+      "Chicago Fire entered the quarterfinal as the top MLS seed after a perfect Phase One.",
+      "Monterrey reached the quarterfinal after six points in Phase One.",
+      "This was the first official head-to-head meeting between the clubs according to the preview.",
+      "The match is hosted at SeatGeek Stadium by Chicago Fire."
+    ]
+  }
+}

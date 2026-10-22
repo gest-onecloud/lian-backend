@@ -1,0 +1,111 @@
+﻿id,match_id,as_of,home,away,competition,season,home_score,away_score,result,home_xg,away_xg,home_elo,away_elo,home_tier,away_tier,home_squad_strength,away_squad_strength,sos_home,sos_away,data_quality,source,ingested_at
+1,seedmx-5888ed6520009b161bd0,2026-07-17,Club Tijuana,Tigres UANL,Liga MX,2026/2027,3,1,1,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+2,seedmx-fa7c02518b91e4446914,2026-07-17,Necaxa,Atlante,Liga MX,2026/2027,2,1,1,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+3,seedmx-a98aceb18586121e21de,2026-07-18,Club Leon,Atlas,Liga MX,2026/2027,2,3,2,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+4,seedmx-afc5d323902109624602,2026-07-18,Juarez,Puebla,Liga MX,2026/2027,0,1,2,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+5,seedmx-c200c0f8d3cc6b4d8730,2026-07-18,Atl. San Luis,Cruz Azul,Liga MX,2026/2027,2,3,2,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+6,seedmx-2af792e62e93d0b505ea,2026-07-19,Monterrey,Santos Laguna,Liga MX,2026/2027,3,2,1,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+7,seedmx-36fb342f7b6021bba4e7,2026-07-19,UNAM Pumas,Pachuca,Liga MX,2026/2027,0,3,2,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+8,seedmx-3df097eaef6ab78d830d,2026-07-19,Guadalajara Chivas,Toluca,Liga MX,2026/2027,0,2,2,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+9,seedmx-d989732275bf89ca21a4,2026-07-19,Queretaro,Club America,Liga MX,2026/2027,0,1,2,,,1500.0,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+10,seedmx-80459862aa4e62d1246f,2026-07-22,Toluca,UNAM Pumas,Liga MX,2026/2027,1,2,2,,,1511.0,1489.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+11,seedmx-d31cb3ebbc7224c01c27,2026-07-22,Cruz Azul,Puebla,Liga MX,2026/2027,2,1,1,,,1510.0,1510.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+12,seedmx-958843e65fd24f6f5ffb,2026-07-25,Club Tijuana,Club Leon,Liga MX,2026/2027,1,0,1,,,1511.0,1490.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+13,seedmx-ca778c13ef9187345b54,2026-07-25,Atlante,Club America,Liga MX,2026/2027,1,1,X,,,1490.0,1510.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+14,seedmx-2896647d3c364cb49dcf,2026-07-26,Tigres UANL,Atl. San Luis,Liga MX,2026/2027,2,2,X,,,1489.0,1490.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+15,seedmx-65947175049fccfdf9a2,2026-07-26,Guadalajara Chivas,Juarez,Liga MX,2026/2027,1,0,1,,,1489.0,1490.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+16,seedmx-f6350c0248a549c79aa5,2026-07-26,Santos Laguna,Atlas,Liga MX,2026/2027,0,1,2,,,1490.0,1510.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+17,seedmx-34bb6d59ce660c98c9ae,2026-07-27,Necaxa,Monterrey,Liga MX,2026/2027,2,1,1,,,1510.0,1510.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+18,seedmx-d86733e194cfcedee5db,2026-07-27,Pachuca,Queretaro,Liga MX,2026/2027,1,2,2,,,1511.0,1490.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+19,seedmx-09c5a688b1415db2b3de,2026-08-01,Juarez,UNAM Pumas,Liga MX,2026/2027,1,5,2,,,1479.9712177658168,1499.6323659565621,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+20,seedmx-6e904bfdb8de4472df83,2026-08-01,Puebla,Guadalajara Chivas,Liga MX,2026/2027,1,1,X,,,1500.0,1499.0287822341832,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+21,seedmx-780ead6eae05fbe30042,2026-08-01,Atl. San Luis,Club Tijuana,Liga MX,2026/2027,0,0,X,,,1489.9712177658168,1520.396306399922,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+22,seedmx-17e90286f3ef4104b293,2026-08-02,Queretaro,Tigres UANL,Liga MX,2026/2027,3,2,1,,,1500.603693600078,1489.0287822341832,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+23,seedmx-5185b21bf7cee131f294,2026-08-02,Cruz Azul,Atlante,Liga MX,2026/2027,2,3,2,,,1520.0,1490.5750112778453,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+24,seedmx-e0033701f3f499d2a03c,2026-08-02,Club Leon,Pachuca,Liga MX,2026/2027,1,0,1,,,1480.603693600078,1500.396306399922,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+25,seedmx-e87d1c9fc213f6142fbe,2026-08-02,Atlas,Monterrey,Liga MX,2026/2027,0,2,2,,,1519.4249887221547,1500.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+26,seedmx-15bc18b5c1c345e3c49d,2026-08-03,Club America,Santos Laguna,Liga MX,2026/2027,3,0,1,,,1509.4249887221547,1480.5750112778453,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+27,seedmx-d596e13e096849188cc1,2026-08-03,Toluca,Necaxa,Liga MX,2026/2027,3,1,1,,,1500.3676340434379,1520.0,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+28,seedmx-d5d1983d9e3c6750adec,2026-08-15,Atlante,Toluca,Liga MX,2026/2027,0,0,X,,,1501.4199114200496,1511.988544737904,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+29,seedmx-747e7ab00df0d3f00cae,2026-08-16,Atlas,Tigres UANL,Liga MX,2026/2027,2,1,1,,,1507.810623004139,1479.3618117621997,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+30,seedmx-a1e905ae8245ccb11d89,2026-08-16,Club America,Atl. San Luis,Liga MX,2026/2027,3,0,1,,,1519.5136762887807,1490.8446905845415,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+31,seedmx-df97611c29c4d1f33d0e,2026-08-16,UNAM Pumas,Queretaro,Liga MX,2026/2027,0,0,X,,,1510.0105469085838,1510.2706640720614,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+32,seedmx-e31f93edf4aed142e9cb,2026-08-16,Monterrey,Juarez,Liga MX,2026/2027,6,1,1,,,1511.6143657180157,1469.5930368137952,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+33,seedmx-10d784047ae09e52a50d,2026-08-17,Club Tijuana,Cruz Azul,Liga MX,2026/2027,2,1,1,,,1519.5228335811973,1509.1550998577957,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+34,seedmx-9cd32d361fb6bd92f680,2026-08-17,Santos Laguna,Guadalajara Chivas,Liga MX,2026/2027,0,1,2,,,1470.4863237112193,1499.056736055741,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+35,seedmx-12d323474d73130d34b7,2026-08-18,Necaxa,Club Leon,Liga MX,2026/2027,1,2,2,,,1508.3790893055339,1491.172755327036,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+36,seedmx-6774bb3cf9aad9c4c2a4,2026-08-18,Pachuca,Puebla,Liga MX,2026/2027,2,3,2,,,1489.827244672964,1499.972046178442,,,,,,,1.0,Bundled verified snapshot V52.17,2026-09-04 06:21:12
+37,cal-2026-08-25-en-carabao-barnsley-crewe-alexandra,2026-08-25,Barnsley,Crewe Alexandra,Carabao Cup,,3,2,1,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+38,cal-2026-08-25-en-carabao-birmingham-city-brentford,2026-08-25,Birmingham City,Brentford,Carabao Cup,,1,6,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+39,cal-2026-08-25-en-carabao-blackburn-rovers-sheffield-united,2026-08-25,Blackburn Rovers,Sheffield United,Carabao Cup,,1,2,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+40,cal-2026-08-25-en-carabao-blackpool-lincoln-city,2026-08-25,Blackpool,Lincoln City,Carabao Cup,,1,4,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+41,cal-2026-08-25-en-carabao-cambridge-united-millwall,2026-08-25,Cambridge United,Millwall,Carabao Cup,,0,1,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+42,cal-2026-08-25-en-carabao-cardiff-city-norwich-city,2026-08-25,Cardiff City,Norwich City,Carabao Cup,,1,2,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+43,cal-2026-08-25-en-carabao-doncaster-rovers-middlesbrough,2026-08-25,Doncaster Rovers,Middlesbrough,Carabao Cup,,1,3,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+44,cal-2026-08-25-en-carabao-fleetwood-town-shrewsbury-town,2026-08-25,Fleetwood Town,Shrewsbury Town,Carabao Cup,,4,0,1,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+45,cal-2026-08-25-en-carabao-ipswich-town-leicester-city,2026-08-25,Ipswich Town,Leicester City,Carabao Cup,,3,1,1,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+46,cal-2026-08-25-en-carabao-nottingham-forest-leeds-united,2026-08-25,Nottingham Forest,Leeds United,Carabao Cup,,0,2,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+47,cal-2026-08-25-en-carabao-plymouth-argyle-coventry-city,2026-08-25,Plymouth Argyle,Coventry City,Carabao Cup,,2,4,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+48,cal-2026-08-25-en-carabao-sheffield-wednesday-wolverhampton-wanderers,2026-08-25,Sheffield Wednesday,Wolverhampton Wanderers,Carabao Cup,,0,2,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+49,cal-2026-08-25-en-carabao-southampton-west-ham-united,2026-08-25,Southampton,West Ham United,Carabao Cup,,1,4,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+50,cal-2026-08-25-en-carabao-stevenage-reading,2026-08-25,Stevenage,Reading,Carabao Cup,,0,3,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+51,cal-2026-08-25-en-carabao-stoke-city-hull-city,2026-08-25,Stoke City,Hull City,Carabao Cup,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+52,cal-2026-08-25-en-carabao-walsall-leyton-orient,2026-08-25,Walsall,Leyton Orient,Carabao Cup,,0,0,X,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+53,cal-2026-08-25-en-carabao-watford-peterborough-united,2026-08-25,Watford,Peterborough United,Carabao Cup,,1,5,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+54,cal-2026-08-25-es-laliga-valencia-real-betis,2026-08-25,Valencia,Real Betis,LaLiga,,0,1,2,,,1500.0,1500.0,,,,,,,1.0,live_verified,2026-09-04 06:21:12
+55,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-1,2026-09-02,QPR,Cardiff,Football League Championship,,2,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+56,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-10,2026-09-02,Celtic,Aberdeen,Scottish Premier,,3,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+57,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-11,2026-09-02,Kilmarnock,St Mirren,Scottish Premier,,0,1,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+58,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-12,2026-09-02,Motherwell,Dundee United,Scottish Premier,,3,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+59,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-13,2026-09-02,Dundee,St Johnstone,Scottish Premier,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+60,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-14,2026-09-02,Falkirk,Rangers,Scottish Premier,,1,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+61,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-15,2026-09-02,FC Brno,Hradec Kralove,Czech Liga,,1,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+62,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-16,2026-09-02,Bohemians 1905,Jablonec,Czech Liga,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+63,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-17,2026-09-02,Austria Vienna,WSG Tirol,Austrian Bundesliga,,0,1,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+64,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-18,2026-09-02,RB Salzburg,Rapid Vienna,Austrian Bundesliga,,5,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+65,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-19,2026-09-02,NK Aluminij,NK Celje,Slovenian League,,0,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+66,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-2,2026-09-02,Millwall,Wrexham,Football League Championship,,0,3,2,,,1510.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+67,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-20,2026-09-02,Aarhus,Midtjylland,Danish SAS Ligaen,,0,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+68,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-21,2026-09-02,St. Truiden,Union St Gilloise,Belgium League,,0,3,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+69,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-22,2026-09-02,Thun,Lausanne,Swiss Super League,,0,0,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+70,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-23,2026-09-02,Lucerne,Vaduz,Swiss Super League,,2,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+71,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-24,2026-09-02,Grasshoppers,St Gallen,Swiss Super League,,2,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+72,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-25,2026-09-02,Sassuolo,Frosinone,Coppa Italia,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+73,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-26,2026-09-02,Udinese,Venezia,Coppa Italia,,2,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+74,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-27,2026-09-02,ML Vitebsk,Belshina,Belarus League,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+75,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-28,2026-09-02,Dinamo Minsk,FC Naftan,Belarus League,,5,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+76,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-29,2026-09-02,Hapoel Beer Sheva,Hapoel Haifa,Israeli League,,2,2,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+77,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-3,2026-09-02,West Brom,Charlton,Football League Championship,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+78,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-30,2026-09-02,Slavia Sofia,Levski Sofia,Bulgarian League,,1,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+79,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-31,2026-09-02,Osnabruck,Bayern Munich,German Cup,,1,4,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+80,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-32,2026-09-02,Winslow United,Milton Keynes Irish,FA Trophy,,3,3,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+81,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-33,2026-09-02,LDU Quito,Mushuc Runa,Ecuador Liga Pro,,0,0,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+82,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-34,2026-09-02,Macara,Manta,Ecuador Liga Pro,,4,3,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+83,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-35,2026-09-02,Deportivo Cuenca,Guayaquil City,Ecuador Liga Pro,,1,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+84,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-36,2026-09-02,Fortaleza CEIF,Once Caldas,Colombia Primera A,,1,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+85,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-37,2026-09-02,V-Varen Nagasaki,Gamba Osaka,J1 League,,2,2,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+86,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-38,2026-09-02,Mito HollyHock,Kashima Antlers,J1 League,,4,2,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+87,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-39,2026-09-02,Machida Zelvia,Kawasaki Frontale,J1 League,,2,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+88,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-4,2026-09-02,Burnley,Middlesbrough,Football League Championship,,1,1,X,,,1500.0,1511.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+89,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-40,2026-09-02,Shimizu S-Pulse,FC Tokyo,J1 League,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+90,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-41,2026-09-02,JEF United,Fagiano Okayama,J1 League,,1,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+91,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-42,2026-09-02,Avispa Fukuoka,Urawa Red Diamonds,J1 League,,2,3,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+92,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-43,2026-09-02,Cerezo Osaka,Kashiwa Reysol,J1 League,,2,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+93,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-44,2026-09-02,Sanf Hiroshima,Nagoya Grampus,J1 League,,3,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+94,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-45,2026-09-02,Yokohama F Marinos,Kyoto Sanga,J1 League,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+95,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-46,2026-09-02,Tokyo Verdy,Vissel Kobe,J1 League,,0,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+96,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-47,2026-09-02,Nacional Asuncion,Libertad,Paraguay League Clausura,,3,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+97,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-48,2026-09-02,Sportivo Ameliano,Sportivo Trinidense,Paraguay League Clausura,,0,3,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+98,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-49,2026-09-02,Olimpia,Club Guarani,Paraguay League Clausura,,1,1,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+99,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-5,2026-09-02,Luton,Stockport,Football League One,,2,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+100,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-50,2026-09-02,Zamora FC,Deportivo Tachira,Venezuela Primera Clausura,,2,5,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+101,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-51,2026-09-02,Coquimbo Unido,Universidad de Concepcion,Chile Primera,,1,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+102,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-52,2026-09-02,Flamengo,Mirassol,Brazilian Serie A,,2,0,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+103,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-6,2026-09-02,Burton,AFC Wimbledon,Football League One,,4,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+104,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-7,2026-09-02,Barnsley,Blackpool,Football League One,,2,1,1,,,1510.0,1489.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+105,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-8,2026-09-02,Wigan,MK Dons,Football League One,,3,1,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+106,live:VerifiedFixtureSeed:2026-09-02:snapshot-2026-09-02-9,2026-09-02,Reading,Mansfield,Football League One,,5,0,1,,,1511.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+107,live:VerifiedFixtureSeed:2026-09-03:snapshot-2026-09-03-1,2026-09-03,Real Sociedad,Celta de Vigo,LaLiga,,0,0,X,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+108,live:VerifiedFixtureSeed:2026-09-03:snapshot-2026-09-03-2,2026-09-03,Cagliari,Hellas Verona,Coppa Italia,,1,2,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+109,live:VerifiedFixtureSeed:2026-09-03:snapshot-2026-09-03-3,2026-09-03,Palermo,Mantova,Coppa Italia,,5,2,1,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12
+110,live:VerifiedFixtureSeed:2026-09-03:snapshot-2026-09-03-4,2026-09-03,Hibernian,Heart of Midlothian,Scottish Premiership,,1,3,2,,,1500.0,1500.0,,,,,,,1.0,VerifiedFixtureSeed,2026-09-04 06:21:12

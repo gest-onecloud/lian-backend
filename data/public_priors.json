@@ -1,0 +1,840 @@
+{
+  "teams": {
+    "arsenal": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.868,
+      "ga_pg": 0.711,
+      "ppg": 0.746,
+      "elo": 1708
+    },
+    "manchester city": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 2.026,
+      "ga_pg": 0.921,
+      "ppg": 0.684,
+      "elo": 1667
+    },
+    "manchester united": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.816,
+      "ga_pg": 1.316,
+      "ppg": 0.623,
+      "elo": 1604
+    },
+    "aston villa": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.474,
+      "ga_pg": 1.289,
+      "ppg": 0.57,
+      "elo": 1578
+    },
+    "liverpool": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.658,
+      "ga_pg": 1.395,
+      "ppg": 0.526,
+      "elo": 1558
+    },
+    "bournemouth": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.526,
+      "ga_pg": 1.421,
+      "ppg": 0.5,
+      "elo": 1547
+    },
+    "sunderland": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.105,
+      "ga_pg": 1.263,
+      "ppg": 0.474,
+      "elo": 1518
+    },
+    "brighton hove albion": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.368,
+      "ga_pg": 1.211,
+      "ppg": 0.465,
+      "elo": 1530
+    },
+    "brentford": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.447,
+      "ga_pg": 1.368,
+      "ppg": 0.465,
+      "elo": 1540
+    },
+    "chelsea": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.526,
+      "ga_pg": 1.368,
+      "ppg": 0.456,
+      "elo": 1538
+    },
+    "fulham": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.237,
+      "ga_pg": 1.342,
+      "ppg": 0.456,
+      "elo": 1526
+    },
+    "newcastle united": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.395,
+      "ga_pg": 1.447,
+      "ppg": 0.43,
+      "elo": 1520
+    },
+    "everton": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.237,
+      "ga_pg": 1.316,
+      "ppg": 0.43,
+      "elo": 1516
+    },
+    "leeds united": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.289,
+      "ga_pg": 1.474,
+      "ppg": 0.412,
+      "elo": 1499
+    },
+    "crystal palace": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.079,
+      "ga_pg": 1.342,
+      "ppg": 0.395,
+      "elo": 1498
+    },
+    "nottingham forest": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.263,
+      "ga_pg": 1.342,
+      "ppg": 0.386,
+      "elo": 1499
+    },
+    "tottenham hotspur": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.263,
+      "ga_pg": 1.5,
+      "ppg": 0.36,
+      "elo": 1478
+    },
+    "west ham united": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.211,
+      "ga_pg": 1.711,
+      "ppg": 0.342,
+      "elo": 1450
+    },
+    "burnley": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 1.0,
+      "ga_pg": 1.974,
+      "ppg": 0.193,
+      "elo": 1400
+    },
+    "wolverhampton wanderers": {
+      "league": "Premier League",
+      "matches": 38,
+      "gf_pg": 0.711,
+      "ga_pg": 1.789,
+      "ppg": 0.175,
+      "elo": 1380
+    },
+    "lincoln city": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.935,
+      "ga_pg": 0.891,
+      "ppg": 0.746,
+      "elo": 1604
+    },
+    "cardiff city": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.957,
+      "ga_pg": 1.087,
+      "ppg": 0.659,
+      "elo": 1579
+    },
+    "stockport county": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.543,
+      "ga_pg": 1.261,
+      "ppg": 0.558,
+      "elo": 1538
+    },
+    "bradford city": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.261,
+      "ga_pg": 1.109,
+      "ppg": 0.558,
+      "elo": 1537
+    },
+    "bolton wanderers": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.522,
+      "ga_pg": 1.13,
+      "ppg": 0.543,
+      "elo": 1548
+    },
+    "stevenage": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.065,
+      "ga_pg": 1.0,
+      "ppg": 0.543,
+      "elo": 1532
+    },
+    "luton town": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.478,
+      "ga_pg": 1.217,
+      "ppg": 0.536,
+      "elo": 1544
+    },
+    "plymouth argyle": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.63,
+      "ga_pg": 1.37,
+      "ppg": 0.529,
+      "elo": 1538
+    },
+    "huddersfield town": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.609,
+      "ga_pg": 1.391,
+      "ppg": 0.486,
+      "elo": 1524
+    },
+    "mansfield town": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.348,
+      "ga_pg": 1.087,
+      "ppg": 0.471,
+      "elo": 1527
+    },
+    "wycombe wanderers": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.5,
+      "ga_pg": 1.261,
+      "ppg": 0.457,
+      "elo": 1530
+    },
+    "reading": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.391,
+      "ga_pg": 1.304,
+      "ppg": 0.457,
+      "elo": 1518
+    },
+    "blackpool": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.174,
+      "ga_pg": 1.413,
+      "ppg": 0.435,
+      "elo": 1485
+    },
+    "doncaster rovers": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.087,
+      "ga_pg": 1.5,
+      "ppg": 0.435,
+      "elo": 1478
+    },
+    "barnsley": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.478,
+      "ga_pg": 1.587,
+      "ppg": 0.427,
+      "elo": 1490
+    },
+    "wigan athletic": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.065,
+      "ga_pg": 1.261,
+      "ppg": 0.406,
+      "elo": 1488
+    },
+    "burton albion": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.087,
+      "ga_pg": 1.304,
+      "ppg": 0.391,
+      "elo": 1480
+    },
+    "peterborough united": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.391,
+      "ga_pg": 1.478,
+      "ppg": 0.384,
+      "elo": 1482
+    },
+    "leyton orient": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.283,
+      "ga_pg": 1.543,
+      "ppg": 0.377,
+      "elo": 1471
+    },
+    "wimbledon": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.109,
+      "ga_pg": 1.565,
+      "ppg": 0.384,
+      "elo": 1462
+    },
+    "exeter city": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 1.13,
+      "ga_pg": 1.326,
+      "ppg": 0.355,
+      "elo": 1465
+    },
+    "port vale": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 0.783,
+      "ga_pg": 1.326,
+      "ppg": 0.304,
+      "elo": 1428
+    },
+    "rotherham united": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 0.891,
+      "ga_pg": 1.543,
+      "ppg": 0.297,
+      "elo": 1430
+    },
+    "northampton town": {
+      "league": "League One",
+      "matches": 46,
+      "gf_pg": 0.848,
+      "ga_pg": 1.609,
+      "ppg": 0.254,
+      "elo": 1416
+    },
+    "bromley": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.543,
+      "ga_pg": 1.0,
+      "ppg": 0.63,
+      "elo": 1545
+    },
+    "milton keynes dons": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.87,
+      "ga_pg": 0.978,
+      "ppg": 0.623,
+      "elo": 1547
+    },
+    "cambridge united": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.435,
+      "ga_pg": 0.717,
+      "ppg": 0.594,
+      "elo": 1544
+    },
+    "salford city": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.326,
+      "ga_pg": 1.109,
+      "ppg": 0.587,
+      "elo": 1536
+    },
+    "notts county": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.609,
+      "ga_pg": 1.13,
+      "ppg": 0.58,
+      "elo": 1544
+    },
+    "chesterfield": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.543,
+      "ga_pg": 1.217,
+      "ppg": 0.572,
+      "elo": 1532
+    },
+    "grimsby town": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.609,
+      "ga_pg": 1.087,
+      "ppg": 0.565,
+      "elo": 1540
+    },
+    "barnet": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.522,
+      "ga_pg": 1.152,
+      "ppg": 0.551,
+      "elo": 1531
+    },
+    "swindon town": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.522,
+      "ga_pg": 1.283,
+      "ppg": 0.543,
+      "elo": 1526
+    },
+    "oldham athletic": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.304,
+      "ga_pg": 0.957,
+      "ppg": 0.493,
+      "elo": 1519
+    },
+    "crewe alexandra": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.391,
+      "ga_pg": 1.261,
+      "ppg": 0.486,
+      "elo": 1505
+    },
+    "colchester united": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.348,
+      "ga_pg": 1.065,
+      "ppg": 0.478,
+      "elo": 1510
+    },
+    "walsall": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.217,
+      "ga_pg": 1.217,
+      "ppg": 0.471,
+      "elo": 1499
+    },
+    "bristol rovers": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.217,
+      "ga_pg": 1.413,
+      "ppg": 0.449,
+      "elo": 1486
+    },
+    "fleetwood town": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.239,
+      "ga_pg": 1.261,
+      "ppg": 0.442,
+      "elo": 1489
+    },
+    "accrington stanley": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.022,
+      "ga_pg": 1.261,
+      "ppg": 0.384,
+      "elo": 1460
+    },
+    "gillingham": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.152,
+      "ga_pg": 1.565,
+      "ppg": 0.384,
+      "elo": 1448
+    },
+    "cheltenham town": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 1.152,
+      "ga_pg": 1.717,
+      "ppg": 0.377,
+      "elo": 1436
+    },
+    "shrewsbury town": {
+      "league": "League Two",
+      "matches": 46,
+      "gf_pg": 0.913,
+      "ga_pg": 1.5,
+      "ppg": 0.355,
+      "elo": 1438
+    },
+    "valencia": {
+      "league": "LaLiga",
+      "matches": 38,
+      "gf_pg": 1.211,
+      "ga_pg": 1.447,
+      "ppg": 0.43,
+      "elo": 1502
+    },
+    "real betis": {
+      "league": "LaLiga",
+      "matches": 38,
+      "gf_pg": 1.553,
+      "ga_pg": 1.263,
+      "ppg": 0.526,
+      "elo": 1558
+    },
+    "monterrey": {
+      "league": "Liga MX",
+      "matches": 34,
+      "gf_pg": 1.62,
+      "ga_pg": 1.56,
+      "ppg": 0.471,
+      "elo": 1545
+    },
+    "club leon": {
+      "league": "Liga MX",
+      "matches": 34,
+      "gf_pg": 1.06,
+      "ga_pg": 1.85,
+      "ppg": 0.343,
+      "elo": 1470
+    },
+    "chicago fire": {
+      "league": "MLS",
+      "matches": 17,
+      "gf_pg": 1.88,
+      "ga_pg": 1.35,
+      "ppg": 0.559,
+      "elo": 1560
+    },
+    "real salt lake": {
+      "league": "MLS",
+      "matches": 17,
+      "gf_pg": 1.71,
+      "ga_pg": 1.47,
+      "ppg": 0.529,
+      "elo": 1535
+    },
+    "bodo glimt": {
+      "league": "Norway",
+      "matches": 0,
+      "gf_pg": 1.9,
+      "ga_pg": 1.0,
+      "ppg": 0.65,
+      "elo": 1580
+    },
+    "nec nijmegen": {
+      "league": "Netherlands",
+      "matches": 0,
+      "gf_pg": 1.45,
+      "ga_pg": 1.3,
+      "ppg": 0.5,
+      "elo": 1515
+    },
+    "lask": {
+      "league": "Austria",
+      "matches": 0,
+      "gf_pg": 1.45,
+      "ga_pg": 1.25,
+      "ppg": 0.52,
+      "elo": 1505
+    },
+    "celtic": {
+      "league": "Scotland",
+      "matches": 0,
+      "gf_pg": 2.15,
+      "ga_pg": 0.85,
+      "ppg": 0.72,
+      "elo": 1640
+    },
+    "sabah": {
+      "league": "Azerbaijan",
+      "matches": 0,
+      "gf_pg": 1.55,
+      "ga_pg": 1.1,
+      "ppg": 0.58,
+      "elo": 1510
+    },
+    "hapoel beer sheva": {
+      "league": "Israel",
+      "matches": 0,
+      "gf_pg": 1.65,
+      "ga_pg": 1.0,
+      "ppg": 0.62,
+      "elo": 1560
+    },
+    "birmingham city": {
+      "league": "Championship",
+      "matches": 0,
+      "elo": 1500
+    }
+  },
+  "competition_context": {
+    "Carabao Cup": {
+      "avg_goals_team": 1.38,
+      "home_advantage_goals": 0.16,
+      "neutral_site": false
+    },
+    "LaLiga": {
+      "avg_goals_team": 1.34,
+      "home_advantage_goals": 0.17,
+      "neutral_site": false
+    },
+    "Leagues Cup": {
+      "avg_goals_team": 1.42,
+      "home_advantage_goals": 0.0,
+      "neutral_site": true
+    },
+    "Champions qualifying": {
+      "avg_goals_team": 1.36,
+      "home_advantage_goals": 0.15,
+      "neutral_site": false
+    }
+  },
+  "current_snapshots": {
+    "monterrey|chicago fire": {
+      "home_gf_pg": 1.7,
+      "home_ga_pg": 1.3,
+      "away_gf_pg": 2.3,
+      "away_ga_pg": 0.7,
+      "home_form_score": 0.6,
+      "away_form_score": 0.78,
+      "passes_pg_home": 437.7,
+      "passes_pg_away": 474.0,
+      "yellow_pg_home": 2.7,
+      "yellow_pg_away": 1.3
+    },
+    "club leon|real salt lake": {
+      "home_gf_pg": 2.0,
+      "home_ga_pg": 1.0,
+      "away_gf_pg": 2.67,
+      "away_ga_pg": 0.33,
+      "home_form_score": 1.0,
+      "away_form_score": 0.5,
+      "passes_pg_home": 394.0,
+      "passes_pg_away": 428.3,
+      "yellow_pg_home": 2.0,
+      "yellow_pg_away": 2.0
+    },
+    "valencia|real betis": {
+      "home_form_score": 0.45,
+      "away_form_score": 0.7,
+      "home_gf_pg": 0.0,
+      "home_ga_pg": 0.0,
+      "away_gf_pg": 1.0,
+      "away_ga_pg": 0.0
+    },
+    "bodo glimt|nec nijmegen": {
+      "home_form_score": 0.7,
+      "away_form_score": 0.4
+    },
+    "lask|celtic": {
+      "home_form_score": 0.3,
+      "away_form_score": 0.75
+    },
+    "sabah|hapoel beer sheva": {
+      "home_form_score": 0.35,
+      "away_form_score": 0.7
+    }
+  },
+  "tie_context": {
+    "bodo glimt|nec nijmegen": {
+      "first_leg_home": "bodo glimt",
+      "first_leg_away": "nec nijmegen",
+      "first_leg_home_goals": 1,
+      "first_leg_away_goals": 3,
+      "home_deficit": 2,
+      "away_deficit": 0
+    },
+    "lask|celtic": {
+      "first_leg_home": "celtic",
+      "first_leg_away": "lask",
+      "first_leg_home_goals": 3,
+      "first_leg_away_goals": 0,
+      "home_deficit": 0,
+      "away_deficit": 3
+    },
+    "sabah|hapoel beer sheva": {
+      "first_leg_home": "hapoel beer sheva",
+      "first_leg_away": "sabah",
+      "first_leg_home_goals": 2,
+      "first_leg_away_goals": 1,
+      "home_deficit": 1,
+      "away_deficit": 0
+    }
+  },
+  "sources": [
+    "Premier League 2025/26 official table",
+    "LALIGA 2025/26 official table",
+    "AS / Leagues Cup 2026 match statistics",
+    "FBref 2026 MLS and Liga MX team statistics",
+    "UEFA/AS 2026 Champions qualifying first-leg context",
+    "RSSSF / Guardian / ESPN 2025-26 Championship final table used as bounded season-strength context"
+  ],
+  "season_context_2025_26": {
+    "coventry city": {
+      "points": 95,
+      "goal_diff": 52,
+      "strength_index": 1697.3
+    },
+    "ipswich town": {
+      "points": 84,
+      "goal_diff": 33,
+      "strength_index": 1648.0
+    },
+    "millwall": {
+      "points": 83,
+      "goal_diff": 15,
+      "strength_index": 1624.8
+    },
+    "southampton": {
+      "points": 80,
+      "goal_diff": 26,
+      "strength_index": 1629.9
+    },
+    "middlesbrough": {
+      "points": 80,
+      "goal_diff": 25,
+      "strength_index": 1628.8
+    },
+    "hull city": {
+      "points": 73,
+      "goal_diff": 4,
+      "strength_index": 1587.1
+    },
+    "wrexham": {
+      "points": 71,
+      "goal_diff": 4,
+      "strength_index": 1582.1
+    },
+    "derby county": {
+      "points": 69,
+      "goal_diff": 8,
+      "strength_index": 1581.7
+    },
+    "norwich city": {
+      "points": 65,
+      "goal_diff": 7,
+      "strength_index": 1570.5
+    },
+    "birmingham city": {
+      "points": 64,
+      "goal_diff": 1,
+      "strength_index": 1561.2
+    },
+    "swansea city": {
+      "points": 64,
+      "goal_diff": -2,
+      "strength_index": 1557.7
+    },
+    "bristol city": {
+      "points": 62,
+      "goal_diff": 0,
+      "strength_index": 1555.0
+    },
+    "sheffield united": {
+      "points": 60,
+      "goal_diff": 0,
+      "strength_index": 1550.0
+    },
+    "preston north end": {
+      "points": 60,
+      "goal_diff": -7,
+      "strength_index": 1542.0
+    },
+    "queens park rangers": {
+      "points": 58,
+      "goal_diff": -12,
+      "strength_index": 1531.2
+    },
+    "watford": {
+      "points": 57,
+      "goal_diff": -12,
+      "strength_index": 1528.7
+    },
+    "stoke city": {
+      "points": 55,
+      "goal_diff": -5,
+      "strength_index": 1531.8
+    },
+    "portsmouth": {
+      "points": 55,
+      "goal_diff": -15,
+      "strength_index": 1520.2
+    },
+    "charlton athletic": {
+      "points": 53,
+      "goal_diff": -14,
+      "strength_index": 1516.4
+    },
+    "blackburn rovers": {
+      "points": 52,
+      "goal_diff": -14,
+      "strength_index": 1513.9
+    },
+    "west bromwich albion": {
+      "points": 51,
+      "goal_diff": -10,
+      "strength_index": 1516.0
+    },
+    "oxford united": {
+      "points": 47,
+      "goal_diff": -14,
+      "strength_index": 1501.4
+    },
+    "leicester city": {
+      "points": 46,
+      "goal_diff": -10,
+      "strength_index": 1503.5
+    },
+    "sheffield wednesday": {
+      "points": 0,
+      "goal_diff": -60,
+      "strength_index": 1331.0
+    }
+  },
+  "team_competition_registry": {
+    "birmingham city": {
+      "league": "Championship",
+      "season": "2026-27",
+      "source_note": "competition identity only; no fabricated performance stats"
+    }
+  }
+}

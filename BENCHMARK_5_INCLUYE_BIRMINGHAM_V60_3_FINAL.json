@@ -1,0 +1,137 @@
+{
+  "version": "60.3.0",
+  "seed": 20260902,
+  "samples": 5,
+  "matches": [
+    {
+      "id": "cal-2026-08-25-en-carabao-birmingham-city-brentford",
+      "date": "2026-08-25",
+      "home": "Birmingham City",
+      "away": "Brentford",
+      "result": "1-6",
+      "actual": "2",
+      "old_version": "55.3",
+      "old_pick": "1",
+      "new_pick": "2",
+      "old_correct": false,
+      "new_correct": true,
+      "old_top2": true,
+      "new_top2": true,
+      "old_probabilities": {
+        "1": 0.41092180553072,
+        "X": 0.2633135629459368,
+        "2": 0.3257646315233432
+      },
+      "new_probabilities": {
+        "1": 0.3064913137342546,
+        "X": 0.2359661669518881,
+        "2": 0.45754251931385725
+      }
+    },
+    {
+      "id": "cal-2026-08-25-en-carabao-nottingham-forest-leeds-united",
+      "date": "2026-08-25",
+      "home": "Nottingham Forest",
+      "away": "Leeds United",
+      "result": "0-2",
+      "actual": "2",
+      "old_version": "55.3",
+      "old_pick": "1",
+      "new_pick": "1",
+      "old_correct": false,
+      "new_correct": false,
+      "old_top2": true,
+      "new_top2": true,
+      "old_probabilities": {
+        "1": 0.39829461703995944,
+        "X": 0.27073671899978613,
+        "2": 0.33096866396025443
+      },
+      "new_probabilities": {
+        "1": 0.40755056036113985,
+        "X": 0.2545918001238568,
+        "2": 0.3378576395150034
+      }
+    },
+    {
+      "id": "cal-2026-08-25-en-carabao-southampton-west-ham-united",
+      "date": "2026-08-25",
+      "home": "Southampton",
+      "away": "West Ham United",
+      "result": "1-4",
+      "actual": "2",
+      "old_version": "55.3",
+      "old_pick": "1",
+      "new_pick": "2",
+      "old_correct": false,
+      "new_correct": true,
+      "old_top2": true,
+      "new_top2": true,
+      "old_probabilities": {
+        "1": 0.47794091469183786,
+        "X": 0.24346077412075723,
+        "2": 0.27859831118740486
+      },
+      "new_probabilities": {
+        "1": 0.3724231562135219,
+        "X": 0.2532428714073404,
+        "2": 0.3743339723791376
+      }
+    },
+    {
+      "id": "cal-2026-08-25-en-carabao-stoke-city-hull-city",
+      "date": "2026-08-25",
+      "home": "Stoke City",
+      "away": "Hull City",
+      "result": "1-1",
+      "actual": "X",
+      "old_version": "55.3",
+      "old_pick": "1",
+      "new_pick": "1",
+      "old_correct": false,
+      "new_correct": false,
+      "old_top2": false,
+      "new_top2": false,
+      "old_probabilities": {
+        "1": 0.38997966482435115,
+        "X": 0.2557878599795862,
+        "2": 0.35423247519606266
+      },
+      "new_probabilities": {
+        "1": 0.3965774785418546,
+        "X": 0.2443867400984599,
+        "2": 0.35903578135968545
+      }
+    },
+    {
+      "id": "cal-2026-08-25-en-carabao-barnsley-crewe-alexandra",
+      "date": "2026-08-25",
+      "home": "Barnsley",
+      "away": "Crewe Alexandra",
+      "result": "3-2",
+      "actual": "1",
+      "old_version": "55.3",
+      "old_pick": "1",
+      "new_pick": "1",
+      "old_correct": true,
+      "new_correct": true,
+      "old_top2": true,
+      "new_top2": true,
+      "old_probabilities": {
+        "1": 0.40990530781236084,
+        "X": 0.26345686670485774,
+        "2": 0.32663782548278136
+      },
+      "new_probabilities": {
+        "1": 0.5092816977846149,
+        "X": 0.2255015372873694,
+        "2": 0.2652167649280157
+      }
+    }
+  ],
+  "old_accuracy": 0.2,
+  "new_accuracy": 0.6,
+  "old_top2": 0.8,
+  "new_top2": 0.8,
+  "policy": "Muestra aleatoria reproducible. No se fuerza el resultado a local; 1/X/2 son igualmente posibles y se conserva la salida real del modelo."
+}

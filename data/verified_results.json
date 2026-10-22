@@ -1,0 +1,22 @@
+{
+  "2026-08-25": [
+    {"match_id":"cal-2026-08-25-es-laliga-valencia-real-betis","home_score":0,"away_score":1,"source":"LaLiga","source_type":"official","source_url":"https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-valencia-cf-real-betis-1"},
+    {"match_id":"cal-2026-08-25-en-carabao-birmingham-city-brentford","home_score":1,"away_score":6,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-nottingham-forest-leeds-united","home_score":0,"away_score":2,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-barnsley-crewe-alexandra","home_score":3,"away_score":2,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-blackburn-rovers-sheffield-united","home_score":1,"away_score":2,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-blackpool-lincoln-city","home_score":1,"away_score":4,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-cambridge-united-millwall","home_score":0,"away_score":1,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-fleetwood-town-shrewsbury-town","home_score":4,"away_score":0,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-ipswich-town-leicester-city","home_score":3,"away_score":1,"source":"Leicester City FC","source_type":"official","source_url":"https://www.lcfc.com/th/fixtures-results?roundID=past&teamID=13"},
+    {"match_id":"cal-2026-08-25-en-carabao-plymouth-argyle-coventry-city","home_score":2,"away_score":4,"source":"Sky Sports","source_type":"secondary","source_url":"https://www.skysports.com/football/plymouth-vs-coventry/report/577439"},
+    {"match_id":"cal-2026-08-25-en-carabao-sheffield-wednesday-wolverhampton-wanderers","home_score":0,"away_score":2,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-southampton-west-ham-united","home_score":1,"away_score":4,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-stevenage-reading","home_score":0,"away_score":3,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-stoke-city-hull-city","home_score":1,"away_score":1,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-walsall-leyton-orient","home_score":0,"away_score":0,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-watford-peterborough-united","home_score":1,"away_score":5,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-cardiff-city-norwich-city","home_score":1,"away_score":2,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"},
+    {"match_id":"cal-2026-08-25-en-carabao-doncaster-rovers-middlesbrough","home_score":1,"away_score":3,"source":"Guardian Football Results","source_type":"secondary","source_url":"https://www.theguardian.com/football/results"}
+  ]
+}

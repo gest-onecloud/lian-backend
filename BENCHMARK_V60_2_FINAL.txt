@@ -1,0 +1,21 @@
+LiAn V60.3.0 FINAL BENCHMARK
+===============================
+
+RANDOM FIVE (seed=20260902)
+2026-08-25 | Ipswich Town vs Leicester City | 3-1 | old=1 | new=1 | old_correct=True | new_correct=True
+2026-08-25 | Sheffield Wednesday vs Wolverhampton Wanderers | 0-2 | old=1 | new=1 | old_correct=False | new_correct=False
+2026-08-25 | Barnsley vs Crewe Alexandra | 3-2 | old=1 | new=1 | old_correct=True | new_correct=True
+2026-08-25 | Nottingham Forest vs Leeds United | 0-2 | old=1 | new=1 | old_correct=False | new_correct=False
+2026-08-25 | Birmingham City vs Brentford | 1-6 | old=1 | new=2 | old_correct=False | new_correct=True
+old_accuracy=0.4000 new_accuracy=0.6000 old_top2=1.0000 new_top2=1.0000
+
+FULL PAIRED COMPARISON
+samples=18
+old {'samples': 18, 'accuracy': 0.3888888888888889, 'top2': 0.8888888888888888, 'brier': 0.6442193617122586, 'log_loss': 1.0593472769381187, 'predicted_distribution': {'1': 14, 'X': 0, '2': 4}, 'actual_distribution': {'1': 3, 'X': 2, '2': 13}}
+new {'samples': 18, 'accuracy': 0.3888888888888889, 'top2': 0.8888888888888888, 'brier': 0.6256160184209086, 'log_loss': 1.0320150938106432, 'predicted_distribution': {'1': 13, 'X': 0, '2': 5}, 'actual_distribution': {'1': 3, 'X': 2, '2': 13}}
+delta {'accuracy': 0.0, 'top2': 0.0, 'brier': -0.01860334329134994, 'log_loss': -0.02733218312747554}
+
+BIRMINGHAM VS BRENTFORD
+{'id': 'cal-2026-08-25-en-carabao-birmingham-city-brentford', 'date': '2026-08-25', 'home': 'Birmingham City', 'away': 'Brentford', 'result': '1-6', 'actual': '2', 'old_version': '55.3', 'old_pick': '1', 'new_pick': '2', 'old_correct': False, 'new_correct': True, 'old_top2': True, 'new_top2': True, 'old_probabilities': {'1': 0.41092180553072, 'X': 0.2633135629459368, '2': 0.3257646315233432}, 'new_probabilities': {'1': 0.3013649789252961, 'X': 0.2356182584330289, '2': 0.463016762641675}}
+
+POLICY: no forced Local; no historical prediction mutation; benchmark is out-of-sample relative to stored prediction and uses only pre-match data for new model.

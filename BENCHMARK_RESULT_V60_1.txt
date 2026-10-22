@@ -1,0 +1,686 @@
+{
+  "random_five": {
+    "version": "60.3.0",
+    "seed": 20260902,
+    "samples": 5,
+    "matches": [
+      {
+        "id": "cal-2026-08-25-en-carabao-ipswich-town-leicester-city",
+        "date": "2026-08-25",
+        "home": "Ipswich Town",
+        "away": "Leicester City",
+        "result": "3-1",
+        "actual": "1",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.46616867721330374,
+          "X": 0.24378133073502584,
+          "2": 0.2900499920516705
+        },
+        "new_probabilities": {
+          "1": 0.45736917517628256,
+          "X": 0.23519170166922712,
+          "2": 0.3074391231544903
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-sheffield-wednesday-wolverhampton-wanderers",
+        "date": "2026-08-25",
+        "home": "Sheffield Wednesday",
+        "away": "Wolverhampton Wanderers",
+        "result": "0-2",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.40928246424205944,
+          "X": 0.25928184575234925,
+          "2": 0.33143569000559137
+        },
+        "new_probabilities": {
+          "1": 0.4296371283312649,
+          "X": 0.24572618529533088,
+          "2": 0.3246366863734042
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-barnsley-crewe-alexandra",
+        "date": "2026-08-25",
+        "home": "Barnsley",
+        "away": "Crewe Alexandra",
+        "result": "3-2",
+        "actual": "1",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.40990530781236084,
+          "X": 0.26345686670485774,
+          "2": 0.32663782548278136
+        },
+        "new_probabilities": {
+          "1": 0.4583977711160309,
+          "X": 0.2347235075469588,
+          "2": 0.30687872133701033
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-nottingham-forest-leeds-united",
+        "date": "2026-08-25",
+        "home": "Nottingham Forest",
+        "away": "Leeds United",
+        "result": "0-2",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.39829461703995944,
+          "X": 0.27073671899978613,
+          "2": 0.33096866396025443
+        },
+        "new_probabilities": {
+          "1": 0.40755056036113985,
+          "X": 0.2545918001238568,
+          "2": 0.3378576395150034
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-birmingham-city-brentford",
+        "date": "2026-08-25",
+        "home": "Birmingham City",
+        "away": "Brentford",
+        "result": "1-6",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.41092180553072,
+          "X": 0.2633135629459368,
+          "2": 0.3257646315233432
+        },
+        "new_probabilities": {
+          "1": 0.4130209450600979,
+          "X": 0.2490616458934273,
+          "2": 0.3379174090464748
+        }
+      }
+    ],
+    "old_accuracy": 0.4,
+    "new_accuracy": 0.4,
+    "old_top2": 1.0,
+    "new_top2": 1.0,
+    "policy": "Muestra aleatoria reproducible. No se fuerza el resultado a local; 1/X/2 son igualmente posibles y se conserva la salida real del modelo."
+  },
+  "compare": {
+    "version": "60.3.0",
+    "samples": 18,
+    "old": {
+      "samples": 18,
+      "accuracy": 0.3888888888888889,
+      "top2": 0.8888888888888888,
+      "brier": 0.6442193617122586,
+      "log_loss": 1.0593472769381187,
+      "predicted_distribution": {
+        "1": 14,
+        "X": 0,
+        "2": 4
+      },
+      "actual_distribution": {
+        "1": 3,
+        "X": 2,
+        "2": 13
+      }
+    },
+    "new": {
+      "samples": 18,
+      "accuracy": 0.3333333333333333,
+      "top2": 0.8888888888888888,
+      "brier": 0.6431417253976847,
+      "log_loss": 1.0556680960842402,
+      "predicted_distribution": {
+        "1": 14,
+        "X": 0,
+        "2": 4
+      },
+      "actual_distribution": {
+        "1": 3,
+        "X": 2,
+        "2": 13
+      }
+    },
+    "delta": {
+      "accuracy": -0.05555555555555558,
+      "top2": 0.0,
+      "brier": -0.0010776363145739154,
+      "log_loss": -0.0036791808538785276
+    },
+    "paired": [
+      {
+        "id": "cal-2026-08-25-en-carabao-barnsley-crewe-alexandra",
+        "date": "2026-08-25",
+        "home": "Barnsley",
+        "away": "Crewe Alexandra",
+        "result": "3-2",
+        "actual": "1",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.40990530781236084,
+          "X": 0.26345686670485774,
+          "2": 0.32663782548278136
+        },
+        "new_probabilities": {
+          "1": 0.4583977711160309,
+          "X": 0.2347235075469588,
+          "2": 0.30687872133701033
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-birmingham-city-brentford",
+        "date": "2026-08-25",
+        "home": "Birmingham City",
+        "away": "Brentford",
+        "result": "1-6",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.41092180553072,
+          "X": 0.2633135629459368,
+          "2": 0.3257646315233432
+        },
+        "new_probabilities": {
+          "1": 0.4130209450600979,
+          "X": 0.2490616458934273,
+          "2": 0.3379174090464748
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-blackburn-rovers-sheffield-united",
+        "date": "2026-08-25",
+        "home": "Blackburn Rovers",
+        "away": "Sheffield United",
+        "result": "1-2",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.39445402717871314,
+          "X": 0.26046840061842325,
+          "2": 0.3450775722028636
+        },
+        "new_probabilities": {
+          "1": 0.39978147596809793,
+          "X": 0.2463443514960691,
+          "2": 0.3538741725358329
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-blackpool-lincoln-city",
+        "date": "2026-08-25",
+        "home": "Blackpool",
+        "away": "Lincoln City",
+        "result": "1-4",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "2",
+        "new_pick": "2",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.35378336472070254,
+          "X": 0.246306030902402,
+          "2": 0.3999106043768954
+        },
+        "new_probabilities": {
+          "1": 0.345571128472047,
+          "X": 0.23649211063681477,
+          "2": 0.4179367608911382
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-cambridge-united-millwall",
+        "date": "2026-08-25",
+        "home": "Cambridge United",
+        "away": "Millwall",
+        "result": "0-1",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "2",
+        "new_pick": "1",
+        "old_correct": true,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.370609042501406,
+          "X": 0.25317179629263936,
+          "2": 0.37621916120595467
+        },
+        "new_probabilities": {
+          "1": 0.4069315956431895,
+          "X": 0.24128641487735736,
+          "2": 0.3517819894794531
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-cardiff-city-norwich-city",
+        "date": "2026-08-25",
+        "home": "Cardiff City",
+        "away": "Norwich City",
+        "result": "1-2",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.42381735854367375,
+          "X": 0.2623698296746875,
+          "2": 0.3138128117816388
+        },
+        "new_probabilities": {
+          "1": 0.43673360711919906,
+          "X": 0.24659074777411194,
+          "2": 0.31667564510668894
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-doncaster-rovers-middlesbrough",
+        "date": "2026-08-25",
+        "home": "Doncaster Rovers",
+        "away": "Middlesbrough",
+        "result": "1-3",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "2",
+        "new_pick": "2",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.3520782097981338,
+          "X": 0.24948326881590255,
+          "2": 0.39843852138596364
+        },
+        "new_probabilities": {
+          "1": 0.35943320610974294,
+          "X": 0.2404355007461472,
+          "2": 0.4001312931441099
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-fleetwood-town-shrewsbury-town",
+        "date": "2026-08-25",
+        "home": "Fleetwood Town",
+        "away": "Shrewsbury Town",
+        "result": "4-0",
+        "actual": "1",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.4351799063222382,
+          "X": 0.2600609604231401,
+          "2": 0.3047591332546217
+        },
+        "new_probabilities": {
+          "1": 0.4434449077741048,
+          "X": 0.24662717571376083,
+          "2": 0.3099279165121344
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-ipswich-town-leicester-city",
+        "date": "2026-08-25",
+        "home": "Ipswich Town",
+        "away": "Leicester City",
+        "result": "3-1",
+        "actual": "1",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.46616867721330374,
+          "X": 0.24378133073502584,
+          "2": 0.2900499920516705
+        },
+        "new_probabilities": {
+          "1": 0.45736917517628256,
+          "X": 0.23519170166922712,
+          "2": 0.3074391231544903
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-nottingham-forest-leeds-united",
+        "date": "2026-08-25",
+        "home": "Nottingham Forest",
+        "away": "Leeds United",
+        "result": "0-2",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.39829461703995944,
+          "X": 0.27073671899978613,
+          "2": 0.33096866396025443
+        },
+        "new_probabilities": {
+          "1": 0.40755056036113985,
+          "X": 0.2545918001238568,
+          "2": 0.3378576395150034
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-plymouth-argyle-coventry-city",
+        "date": "2026-08-25",
+        "home": "Plymouth Argyle",
+        "away": "Coventry City",
+        "result": "2-4",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "2",
+        "new_pick": "2",
+        "old_correct": true,
+        "new_correct": true,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.3697768385848951,
+          "X": 0.24468208630518395,
+          "2": 0.3855410751099209
+        },
+        "new_probabilities": {
+          "1": 0.3810906550950048,
+          "X": 0.23537109193221661,
+          "2": 0.38353825297277866
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-sheffield-wednesday-wolverhampton-wanderers",
+        "date": "2026-08-25",
+        "home": "Sheffield Wednesday",
+        "away": "Wolverhampton Wanderers",
+        "result": "0-2",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.40928246424205944,
+          "X": 0.25928184575234925,
+          "2": 0.33143569000559137
+        },
+        "new_probabilities": {
+          "1": 0.4296371283312649,
+          "X": 0.24572618529533088,
+          "2": 0.3246366863734042
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-southampton-west-ham-united",
+        "date": "2026-08-25",
+        "home": "Southampton",
+        "away": "West Ham United",
+        "result": "1-4",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.47794091469183786,
+          "X": 0.24346077412075723,
+          "2": 0.27859831118740486
+        },
+        "new_probabilities": {
+          "1": 0.47953119443135317,
+          "X": 0.23303403609025447,
+          "2": 0.28743476947839236
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-stevenage-reading",
+        "date": "2026-08-25",
+        "home": "Stevenage",
+        "away": "Reading",
+        "result": "0-3",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.3874951974578264,
+          "X": 0.27202295746108157,
+          "2": 0.34048184508109197
+        },
+        "new_probabilities": {
+          "1": 0.40516660447259434,
+          "X": 0.25670725925052934,
+          "2": 0.3381261362768764
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-stoke-city-hull-city",
+        "date": "2026-08-25",
+        "home": "Stoke City",
+        "away": "Hull City",
+        "result": "1-1",
+        "actual": "X",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": false,
+        "new_top2": false,
+        "old_probabilities": {
+          "1": 0.38997966482435115,
+          "X": 0.2557878599795862,
+          "2": 0.35423247519606266
+        },
+        "new_probabilities": {
+          "1": 0.3965774785418546,
+          "X": 0.2443867400984599,
+          "2": 0.35903578135968545
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-walsall-leyton-orient",
+        "date": "2026-08-25",
+        "home": "Walsall",
+        "away": "Leyton Orient",
+        "result": "0-0",
+        "actual": "X",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "2",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": false,
+        "new_top2": false,
+        "old_probabilities": {
+          "1": 0.40559572957073997,
+          "X": 0.26446406804075195,
+          "2": 0.3299402023885081
+        },
+        "new_probabilities": {
+          "1": 0.3752794645111074,
+          "X": 0.24028174593542972,
+          "2": 0.3844387895534629
+        }
+      },
+      {
+        "id": "cal-2026-08-25-en-carabao-watford-peterborough-united",
+        "date": "2026-08-25",
+        "home": "Watford",
+        "away": "Peterborough United",
+        "result": "1-5",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.423652166643191,
+          "X": 0.2564488922340291,
+          "2": 0.31989894112277983
+        },
+        "new_probabilities": {
+          "1": 0.426026552222545,
+          "X": 0.2439380051730402,
+          "2": 0.3300354426044148
+        }
+      },
+      {
+        "id": "cal-2026-08-25-es-laliga-valencia-real-betis",
+        "date": "2026-08-25",
+        "home": "Valencia",
+        "away": "Real Betis",
+        "result": "0-1",
+        "actual": "2",
+        "old_version": "55.3",
+        "old_pick": "1",
+        "new_pick": "1",
+        "old_correct": false,
+        "new_correct": false,
+        "old_top2": true,
+        "new_top2": true,
+        "old_probabilities": {
+          "1": 0.40077065909035653,
+          "X": 0.2564432287248148,
+          "2": 0.3427861121848287
+        },
+        "new_probabilities": {
+          "1": 0.41513399615738766,
+          "X": 0.24414558291233307,
+          "2": 0.3407204209302793
+        }
+      }
+    ],
+    "policy": "Comparación fuera de muestra respecto al registro preexistente; no escribe aprendizaje ni modifica predicciones históricas."
+  },
+  "walk_forward": {
+    "model_version": "60.3.0",
+    "samples": 54,
+    "accuracy": 0.35185185185185186,
+    "brier": 0.7217642234360413,
+    "log_loss": 1.1761650085181548,
+    "feature_directional_performance": {
+      "Sede real": {
+        "samples": 50,
+        "correct_direction": 12
+      },
+      "Ataque ajustado": {
+        "samples": 43,
+        "correct_direction": 19
+      },
+      "Defensa ajustada": {
+        "samples": 42,
+        "correct_direction": 18
+      },
+      "Fuerza/ELO": {
+        "samples": 39,
+        "correct_direction": 23
+      },
+      "Forma": {
+        "samples": 22,
+        "correct_direction": 11
+      },
+      "Producción ajustada": {
+        "samples": 23,
+        "correct_direction": 10
+      },
+      "Descanso": {
+        "samples": 23,
+        "correct_direction": 11
+      },
+      "Fatiga/contexto adaptativo": {
+        "samples": 12,
+        "correct_direction": 3
+      },
+      "Perfil de liga": {
+        "samples": 7,
+        "correct_direction": 3
+      },
+      "Viaje": {
+        "samples": 1,
+        "correct_direction": 0
+      }
+    },
+    "policy": "walk-forward; no future leakage; automatic weight changes require a minimum sample threshold and out-of-sample improvement."
+  }
+}
